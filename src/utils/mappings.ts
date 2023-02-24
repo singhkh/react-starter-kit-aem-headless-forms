@@ -12,11 +12,21 @@ governing permissions and limitations under the License.
 import { mappings } from "@aemforms/af-react-components";
 import RichText from "../components/richtext";
 import Slider from "../components/slider";
+import MaterialtextField from "../components/materialtextfield";
+import MaterialsliderField from "../components/materialslider";
+import MaterialtextFieldmultiline from "../components/materialtextfieldmultiline";
+import MaterialtabsField from "../components/materialtabs";
+
 
 const customMappings: any = {
-  "custom:slider": Slider,
-  "custom:rich-text": RichText,
-  ...mappings
+  ...mappings,
+  "number-input": MaterialsliderField,
+  "slider": Slider,
+  "rich-text": RichText,
+  "text-input": MaterialtextField,
+  "multiline-input": MaterialtextFieldmultiline,
+  "forms-components-examples/components/form/tabsontop": MaterialtabsField
+
 };
 
 export default customMappings;
